@@ -8,12 +8,43 @@ var net = require("net");
 var config = require("./datas/config.json");
 var logs = require("./datas/logs.txt");
 
-var dclient = new Discord.Client();
-var wclient = new net.socket();
+var discord_client = new Discord.Client();
+var web_client = new net.socket();
+
+// main functions
+
+function calculate_next_opportunity(var transactions_type, string last_day_pillars) {
+    
+    if (transactions_type == 0) { // if the trading transactions type is buy only
+        
+        
+        
+    } else if (transactions_type == 1) { // if the trading transactions type is sell only
+        
+        
+        
+    } else if (transactions_type == 2) { // of the trading transactions type is buy and sell
+        
+        
+        
+    } else { // if the trading transactions type is not 0, 1 or 2 then return error
+        
+        console.log("Error, the trading transactions type is not buy, sell or buy and sell !");
+        
+    };
+    
+};
+function calculate_next_opportunitys() {}
 
 ///Here is the code of the Bot
 
-webClient.on(wc => {
+discord_lient.on("client", dclient => {
+    
+    
+    
+});
+
+web_cient.on(wc => {
     
     wc.connect("", "", `${config["user_token"]}`);
     
