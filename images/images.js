@@ -1,1 +1,0 @@
-var BotImages = require("./bot")
