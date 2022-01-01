@@ -13,17 +13,17 @@ var web_client = new net.socket();
 
 // main functions
 
-function calculate_next_opportunity(var transactions_type, string last_day_pillars) {
+function calculate_next_opportunity(string last_day_pillars) {
     
-    if (transactions_type == 0) { // if the trading transactions type is buy only
+    if (config["trading_transactions"["type"]] == 0) { // if the trading transactions type is buy only
         
         
         
-    } else if (transactions_type == 1) { // if the trading transactions type is sell only
+    } else if (config["trading_transactions"["type"]] == 1) { // if the trading transactions type is sell only
         
         
         
-    } else if (transactions_type == 2) { // of the trading transactions type is buy and sell
+    } else if (config["trading_transactions"["type"]] == 2) { // of the trading transactions type is buy and sell
         
         
         
