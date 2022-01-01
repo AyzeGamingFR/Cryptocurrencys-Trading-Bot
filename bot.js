@@ -3,17 +3,19 @@
 var Discord = require("discord.js");
 var net = require("net");
 
+var discord_client = new Discord.Client();
+var web_client = new net.socket();
+
 ///Here is all of the datas
 
 var config = require("./datas/config.json");
 var logs = require("./datas/logs.txt");
 
-var discord_client = new Discord.Client();
-var web_client = new net.socket();
+var opportunitys = [];
 
 // main functions
 
-function calculate_next_opportunity(string last_day_pillars) {
+function calculate_next_opportunity(var day_pillars) {
     
     if (config["trading_transactions"["type"]] == 0) { // if the trading transactions type is buy only
         
@@ -34,7 +36,11 @@ function calculate_next_opportunity(string last_day_pillars) {
     };
     
 };
-function calculate_next_opportunitys() {}
+function calculate_next_opportunitys(var number, var day_pillars) {
+    
+    
+    
+};
 
 ///Here is the code of the Bot
 
