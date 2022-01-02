@@ -38,15 +38,15 @@ function calculate_next_opportunity(var day_pillars) {
 };
 function calculate_next_opportunitys(var number, var day_pillars) {
     
-    if (number != 0 && number <= 10) {
+    if (number != 0 && number <= 5) {
+        
+        
+        
+    } else if (number > 5 && number <= 10) {
         
         
         
     } else if (number > 10 && number <= 25) {
-        
-        
-        
-    } else if (number > 25 && number <= 50) {
         
         
         
