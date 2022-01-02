@@ -38,20 +38,36 @@ function calculate_next_opportunity(var day_pillars) {
 };
 function calculate_next_opportunitys(var number, var day_pillars) {
     
-    
+    if (number != 0 && number <= 10) {
+        
+        
+        
+    } else if (number > 10 && number <= 25) {
+        
+        
+        
+    } else if (number > 25 && number <= 50) {
+        
+        
+        
+    } else {
+        
+        
+        
+    };
     
 };
 
 ///Here is the code of the Bot
 
-discord_lient.on("client", dclient => {
+discord_client.on(function ("client", dclient) => {
     
     
     
 });
 
-web_cient.on(wc => {
+web_cient.on(function ("wclient", wclient) => {
     
-    wc.connect("", "", `${config["user_token"]}`);
+    wclient.connect("", "", `${config["user_token"]}`);
     
 });
