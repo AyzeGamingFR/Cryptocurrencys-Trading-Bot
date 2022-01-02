@@ -68,12 +68,12 @@ discord_client.on(function ("client", dclient) => {
 
 web_cient.on(function ("wclient", wclient) => {
     
-    if (config["exchange"]) { // if the exchange is coinbase
+    if (config["exchange"] == 0) { // if the exchange is coinbase
         
         wclient.connect(`xxx.xxx.xxx.xxx:xxxxx`);
         wclient.send(`${config["user_token"]}`);
         
-    } else if (config[""]) { // if the exchange is stormgain
+    } else if (config["exchange"] == 1) { // if the exchange is stormgain
         
         wclient.connect(`xxx.xxx.xxx.xxx:xxxxx`);
         wclient.send(`${config["user_token"]}`);
