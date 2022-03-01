@@ -66,21 +66,30 @@ discord_client.on(function ("client", dclient) => {
     
 });
 
-web_cient.on(function ("wclient", wclient) => {
+web_cient.on(function ("wClient", wclient) => {
     
     if (config["exchange"] == 0) { // if the exchange is coinbase
         
-        wclient.connect(`xxx.xxx.xxx.xxx:xxxxx`);
-        wclient.send(`${config["user_token"]}`);
+        wclient.connect(`${config["coinbase"["ip_address"]]}`);
+        wclient.send(`${config["coinbase"["token"]]}`);
         
-    } else if (config["exchange"] == 1) { // if the exchange is stormgain
+    } else if (config["exchange"] == 1 && config[""] === config[]) { // if the exchange is crypto.com
         
-        wclient.connect(`xxx.xxx.xxx.xxx:xxxxx`);
-        wclient.send(`${config["user_token"]}`);
+        wclient.connect(`${config["crypto.com"["ip_address"]]}`);
+        wclient.send(`${config["crypto.com"["token"]]}`);
         
-    } else {
+    } else if (config["exchange"] == 2 && config["binance"["token"]].size() === config["binance"["token_normal_size"]]) { // if the exchange is binance
         
-        wclient.connect();
+        wclient.connect(`${config["binance"["ip_address"]]}`);
+        wclient.send(`${config["binance"["token"]]}`);
+        collectPrices(config["binance"["ip_address"]]);
+        
+    } else if (config["exchange"] == 3 && config["stormgain"["token"]].size() === config["stormgain"["token_normal_size"]]) { // if the exchange is stormgain
+        
+        wclient.connect(`${config["stormgain"["ip_address"]]}`);
+        wclient.send(`${config["stormgain"["token"]]}`);
+        collectPrices(config["stormgain"["ip_address"]]);
         
     };
+    
 });
