@@ -1,5 +1,33 @@
 {
     
-    
+    "exchanges": {
+        
+        "binance": {
+            
+            "token": "",
+            "normal_token_size": 0
+            
+        },
+        "coinbase": {
+            
+            "token": "",
+            "normal_token_size": 0
+            
+        },
+        "crypto.com": {
+            
+            "token": "",
+            "normal_token_size": 0
+            
+        },
+        "stormgain": {
+            
+            "token": "",
+            "normal_token_size": 0
+            
+        }
+        
+    },
+    "exchange": 1
     
 }
