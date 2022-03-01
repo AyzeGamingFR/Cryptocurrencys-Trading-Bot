@@ -68,29 +68,35 @@ discord_client.on(function ("client", dclient) => {
 
 internet_cient.on(function ("iClient", iclient) => {
     
-    if (config["exchange"] == 0) { // if the exchange is coinbase and the size of your token is equal to the coinbase api tokens size
+    if (config["exchange"] == 0 && config["exchanges"["coinbhase"["token"]]].size() === config["exchanges"["coinbase"["token_normal_size"]]]) { // if the exchange is coinbase and the size of your token is equal to the coinbase api tokens size
         
         iclient.connect(`${config["coinbase"["ip_address"]]}`);
         iclient.send(`${config["coinbase"["token"]]}`);
         collectPrices(config["coinbase"["ip_address"]]);
         
-    } else if (config["exchange"] == 1 && config["crypto.com"["token"]].size() === config["crypto.com"["token_normal_size"]]) { // if the exchange is crypto.com and the size of your token is equal to the crypto.com api tokens size
+    } else if (config["exchange"] == 1 && config["exchanges"["crypto.com"["token"]]].size() === config["exchanges"["crypto.com"["token_normal_size"]]) { // if the exchange is crypto.com and the size of your token is equal to the crypto.com api tokens size
         
         iclient.connect(`${config["crypto.com"["ip_address"]]}`);
         iclient.send(`${config["crypto.com"["token"]]}`);
         collectPrices(config["crypto.com"["ip_address"]]);
         
-    } else if (config["exchange"] == 2 && config["binance"["token"]].size() === config["binance"["token_normal_size"]]) { // if the exchange is binance and the size of your token is equal to the binance api tokens size
+    } else if (config["exchange"] == 2 && config["exchanges"["binance"["token"]]].size() === config["exchanges"["binance"["token_normal_size"]]) { // if the exchange is binance and the size of your token is equal to the binance api tokens size
         
         iclient.connect(`${config["binance"["ip_address"]]}`);
         iclient.send(`${config["binance"["token"]]}`);
-        collectPrices(config["binance"["ip_address"]]);
+        collectPrices(config["exchanges"["binance"["ip_address"]]]);
         
-    } else if (config["exchange"] == 3 && config["stormgain"["token"]].size() === config["stormgain"["token_normal_size"]]) { // if the exchange is stormgain and the size of your token is equal to the storgain api tokens size
+    } else if (config["exchange"] == 3 && config["exchanges"["poloniex"["token"]]].size() === config["exchanges"["poloniex"["token_normal_size"]]]) { // if the exchange is poloniex and the size of your token is equal to the poloniex api token size
         
-        iclient.connect(`${config["stormgain"["ip_address"]]}`);
-        iclient.send(`${config["stormgain"["token"]]}`);
-        collectPrices(config["stormgain"["ip_address"]]);
+        iclient.connect(`${config["exchange"["poloniex"["ip_address"]]]}`);
+        iclient.send(`${config["exchanges"["poloniex"["token"]]]}`);
+        collectPrices(config["exchanges"["poloniex"["ip_address"]]]);
+        
+    } else if (config["exchange"] == 4 && config["exchanges"["stormgain"["token"]]].size() === config["exchanges"["stormgain"["token_normal_size"]]]) { // if the exchange is stormgain and the size of your token is equal to the storgain api tokens size
+        
+        iclient.connect(`${config["exchanges"["stormgain"["ip_address"]]]}`);
+        iclient.send(`${config["exchanges"["stormgain"["token"]]]}`);
+        collectPrices(config["exchanges"["stormgain"["ip_address"]]]);
         
     };
     
