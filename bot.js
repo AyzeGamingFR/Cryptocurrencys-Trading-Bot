@@ -4,7 +4,7 @@ var Discord = require("discord.js");
 var net = require("net");
 
 var discord_client = new Discord.Client();
-var web_client = new net.socket();
+var internet_client = new net.socket();
 
 /// variables needed as the bot work without problem
 
@@ -66,30 +66,30 @@ discord_client.on(function ("client", dclient) => {
     
 });
 
-web_cient.on(function ("wClient", wclient) => {
+internet_cient.on(function ("iClient", iclient) => {
     
     if (config["exchange"] == 0) { // if the exchange is coinbase and the size of your token is equal to the coinbase api tokens size
         
-        wclient.connect(`${config["coinbase"["ip_address"]]}`);
-        wclient.send(`${config["coinbase"["token"]]}`);
+        iclient.connect(`${config["coinbase"["ip_address"]]}`);
+        iclient.send(`${config["coinbase"["token"]]}`);
         collectPrices(config["coinbase"["ip_address"]]);
         
     } else if (config["exchange"] == 1 && config["crypto.com"["token"]].size() === config["crypto.com"["token_normal_size"]]) { // if the exchange is crypto.com and the size of your token is equal to the crypto.com api tokens size
         
-        wclient.connect(`${config["crypto.com"["ip_address"]]}`);
-        wclient.send(`${config["crypto.com"["token"]]}`);
+        iclient.connect(`${config["crypto.com"["ip_address"]]}`);
+        iclient.send(`${config["crypto.com"["token"]]}`);
         collectPrices(config["crypto.com"["ip_address"]]);
         
     } else if (config["exchange"] == 2 && config["binance"["token"]].size() === config["binance"["token_normal_size"]]) { // if the exchange is binance and the size of your token is equal to the binance api tokens size
         
-        wclient.connect(`${config["binance"["ip_address"]]}`);
-        wclient.send(`${config["binance"["token"]]}`);
+        iclient.connect(`${config["binance"["ip_address"]]}`);
+        iclient.send(`${config["binance"["token"]]}`);
         collectPrices(config["binance"["ip_address"]]);
         
     } else if (config["exchange"] == 3 && config["stormgain"["token"]].size() === config["stormgain"["token_normal_size"]]) { // if the exchange is stormgain and the size of your token is equal to the storgain api tokens size
         
-        wclient.connect(`${config["stormgain"["ip_address"]]}`);
-        wclient.send(`${config["stormgain"["token"]]}`);
+        iclient.connect(`${config["stormgain"["ip_address"]]}`);
+        iclient.send(`${config["stormgain"["token"]]}`);
         collectPrices(config["stormgain"["ip_address"]]);
         
     };
