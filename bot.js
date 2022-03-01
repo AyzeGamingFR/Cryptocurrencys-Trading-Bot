@@ -70,20 +70,20 @@ internet_cient.on(function ("iClient", iclient) => {
     
     if (config["exchange"] == 0 && config["exchanges"["coinbhase"["token"]]].size() === config["exchanges"["coinbase"["token_normal_size"]]]) { // if the exchange is coinbase and the size of your token is equal to the coinbase api tokens size
         
-        iclient.connect(`${config["coinbase"["ip_address"]]}`);
-        iclient.send(`${config["coinbase"["token"]]}`);
-        collectPrices(config["coinbase"["ip_address"]]);
+        iclient.connect(`${config["exchanges"["coinbase"["ip_address"]]]}`);
+        iclient.send(`${config["exchanges"["coinbase"["token"]]]}`);
+        collectPrices(config["exchanges"["coinbase"["ip_address"]]]);
         
     } else if (config["exchange"] == 1 && config["exchanges"["crypto.com"["token"]]].size() === config["exchanges"["crypto.com"["token_normal_size"]]) { // if the exchange is crypto.com and the size of your token is equal to the crypto.com api tokens size
         
-        iclient.connect(`${config["crypto.com"["ip_address"]]}`);
-        iclient.send(`${config["crypto.com"["token"]]}`);
-        collectPrices(config["crypto.com"["ip_address"]]);
+        iclient.connect(`${config["exchanges"["crypto.com"["ip_address"]]]}`);
+        iclient.send(`${config["exchanges"["crypto.com"["token"]]]}`);
+        collectPrices(config["exchanges"["crypto.com"["ip_address"]]]);
         
     } else if (config["exchange"] == 2 && config["exchanges"["binance"["token"]]].size() === config["exchanges"["binance"["token_normal_size"]]) { // if the exchange is binance and the size of your token is equal to the binance api tokens size
         
-        iclient.connect(`${config["binance"["ip_address"]]}`);
-        iclient.send(`${config["binance"["token"]]}`);
+        iclient.connect(`${config["exchanges"["binance"["ip_address"]]]}`);
+        iclient.send(`${config["exchanges"["binance"["token"]]]}`);
         collectPrices(config["exchanges"["binance"["ip_address"]]]);
         
     } else if (config["exchange"] == 3 && config["exchanges"["poloniex"["token"]]].size() === config["exchanges"["poloniex"["token_normal_size"]]]) { // if the exchange is poloniex and the size of your token is equal to the poloniex api token size
