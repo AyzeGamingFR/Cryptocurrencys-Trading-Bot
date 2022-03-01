@@ -29,5 +29,10 @@
         
     },
     "exchange": 1
+    "trading_transactions": {
+        
+        "type": 1
+        
+    }
     
 }
